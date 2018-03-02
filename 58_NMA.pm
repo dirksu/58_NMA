@@ -1,5 +1,5 @@
 #
-#  58_NMA.pm 
+#  58_NMAsend.pm 
 #
 
 package main;
@@ -11,14 +11,19 @@ use [...]
 # FHEM Modulfunktionen
 
 sub NMA_Initialize() {
-   my ($hash) = @_;
+    $cmds{NMAsend} = { Fn           => "CommandNMA",
+                   Hlp          => "<argument1> [optional_argument2], print something very useful",
+                };
 }
 
-sub NMA_Define() {
-   ...
+sub CommandNMAsend($$)
+{
+ 	my ($client_hash, $arguments) = @_;
+	
+	...
+	
+	return $output;
 }
-
-...
 
 # Eval-Rückgabewert für erfolgreiches
 # Laden des Moduls
