@@ -11,7 +11,7 @@ use [...]
 # FHEM Modulfunktionen
 
 sub NMA_Initialize() {
-   ...
+   my ($hash) = @_;
 }
 
 sub NMA_Define() {
