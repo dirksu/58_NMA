@@ -11,7 +11,7 @@ use [...]
 # FHEM Modulfunktionen
 
 sub NMA_Initialize() {
-    $cmds{NMAsend} = { Fn           => "CommandNMA",
+    $cmds{NMAsend} = { Fn           => "CommandNMAsend",
                    Hlp          => "<argument1> [optional_argument2], print something very useful",
                 };
 }
